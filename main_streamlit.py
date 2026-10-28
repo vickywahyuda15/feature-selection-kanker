@@ -109,6 +109,21 @@ st.markdown(
         color: #FFFFFF !important;
         opacity: 1 !important;
       }
+      [data-testid="stToolbar"] {
+    display: none !important;
+}
+
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
     </style>
     """,
     unsafe_allow_html=True,
@@ -259,7 +274,7 @@ def styled_bar(metric_df, metric, title, xlabel, percent=False, descending=False
     fig.patch.set_facecolor("white")
     ax.set_facecolor("white")
     fig.tight_layout(pad=1.25)
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
     plt.close(fig)
 
 
@@ -444,7 +459,7 @@ with tab_summary:
         display["Rata-rata fitur"] = metrics["Jumlah_Fitur"].map(lambda x: f"{x:.2f}" if pd.notna(x) else "—")
     if "Waktu_Seleksi_Detik" in metrics:
         display["Waktu seleksi (detik)"] = metrics["Waktu_Seleksi_Detik"].map(lambda x: f"{x:.3f}" if pd.notna(x) else "N/A")
-    st.dataframe(display, use_container_width=True)
+    st.dataframe(display, width="stretch")
 
     left, right = st.columns(2)
     with left:
