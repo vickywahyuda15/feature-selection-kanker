@@ -84,6 +84,20 @@ st.markdown(
       div[data-testid="stMetricValue"] { color: #14233a; font-weight: 800; }
       div[data-testid="stTabs"] button { font-weight: 700; }
       .stDataFrame { border-radius: 12px; overflow: hidden; }
+
+      /* Perbaikan kontras header tabel Streamlit */
+      [data-testid="stDataFrame"] [role="columnheader"],
+      [data-testid="stDataFrame"] thead th {
+        background-color: #17365D !important;
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+        border-bottom: 1px solid #CBD5E1 !important;
+      }
+      [data-testid="stDataFrame"] [role="columnheader"] *,
+      [data-testid="stDataFrame"] thead th * {
+        color: #FFFFFF !important;
+        opacity: 1 !important;
+      }
     </style>
     """,
     unsafe_allow_html=True,
@@ -554,4 +568,4 @@ with tab_about:
         st.write("Kolom data fold:", list(fold_df.columns))
         st.write("Jumlah baris yang sedang dipakai:", len(view_df))
 
-st.markdown('<div class="footer"> penelitian · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Dashboard penelitian · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
