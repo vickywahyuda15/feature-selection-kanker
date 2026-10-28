@@ -363,7 +363,7 @@ if time_df is not None and not time_df.empty:
 st.markdown(
     """
     <div class="hero">
-      <div class="hero-kicker">Dashboard Riset · Machine Learning</div>
+      <div class="hero-kicker">Dashboard · Machine Learning</div>
             <P>Nama : Afifah Zubdatul Ishlah-072926011 </p>
             <p>Nama : Haykal Saputra Joban-072926031 </p>
             <p>Nama : Muhammad Vicky Wahyuda-072926007 </p>
@@ -568,4 +568,4 @@ with tab_about:
         st.write("Kolom data fold:", list(fold_df.columns))
         st.write("Jumlah baris yang sedang dipakai:", len(view_df))
 
-st.markdown('<div class="footer">Dashboard penelitian · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Dashboard · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
