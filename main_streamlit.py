@@ -381,6 +381,7 @@ st.markdown(
             <p>Nama : Muhammad Vicky Wahyuda-072926007 </p>
             <p>Nama : Afrizal Subagja-072926002 </p>
             <p>Dosen : Dr.FAJAR DELLI WIHARTIKO, S.Si, MM, M.Kom </p>
+            <p> </p>
             <p>Perbandingan Baseline, Sequential Forward Selection (SFS), Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA) dengan Logistic Regression.</p>
       <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
       <span class="hero-chip">569 sampel · 30 fitur</span>
