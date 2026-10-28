@@ -1,0 +1,67 @@
+PETUNJUK PENGGUNAAN PROYEK PENELITIAN
+
+Judul:
+Analisis Perbandingan Metode Feature Selection untuk Meningkatkan Akurasi Klasifikasi Kanker Payudara
+
+1. DESKRIPSI PROYEK
+
+Proyek ini merupakan implementasi machine learning untuk membandingkan metode feature selection pada klasifikasi kanker payudara menggunakan dataset Breast Cancer Wisconsin (Diagnostic).
+
+Metode yang dibandingkan:
+- Baseline (tanpa feature selection)
+- Sequential Forward Selection (SFS)
+- Recursive Feature Elimination (RFE)
+- Genetic Algorithm (GA)
+
+Evaluasi dilakukan menggunakan metrik klasifikasi, seperti Accuracy, Precision, Recall, dan F1-Score. Jumlah fitur terpilih dan waktu seleksi juga digunakan untuk membantu membandingkan metode.
+
+2. STRUKTUR FOLDER
+
+File main_streamlit.py:
+Digunakan untuk menjalankan dashboard visualisasi hasil penelitian.
+
+File validasi_penelitian.py:
+Digunakan untuk menjalankan eksperimen dan menghasilkan hasil pengujian.
+
+File requirements.txt:
+Berisi daftar pustaka Python yang diperlukan untuk menjalankan program.
+
+Folder hasil_pengujian:
+Berisi file CSV hasil eksperimen yang dibaca oleh dashboard.
+
+3. PERSIAPAN LINGKUNGAN
+
+Pastikan Python telah terpasang di komputer.
+
+Instal pustaka yang diperlukan menggunakan:
+
+python -m pip install -r requirements.txt
+
+4. MENJALANKAN DASHBOARD
+
+Pastikan folder hasil_pengujian berisi file CSV hasil eksperimen.
+
+Jalankan perintah berikut di terminal:
+
+python -m streamlit run main_streamlit_menarik_perbaikan.py
+
+Dashboard akan terbuka di browser. Jika browser tidak terbuka otomatis, akses alamat lokal yang ditampilkan pada terminal, biasanya:
+
+http://localhost:8501
+
+5. MENJALANKAN EKSPERIMEN
+
+Untuk menjalankan kembali pengujian machine learning, gunakan:
+
+python validasi_penelitian_final.py
+
+Tunggu hingga proses selesai. Hasil eksperimen akan disimpan sesuai pengaturan folder keluaran pada kode program.
+
+Catatan: Pastikan lokasi folder keluaran pada kode eksperimen sesuai dengan struktur folder proyek.
+
+6. HASIL PENELITIAN
+
+File CSV pada folder hasil_pengujian digunakan sebagai sumber data untuk tabel dan grafik dashboard.
+
+Hasil yang ditampilkan mengikuti hasil eksperimen yang tersimpan. Jalankan eksperimen kembali apabila ingin memperbarui hasil penelitian.
+
