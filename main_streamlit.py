@@ -554,4 +554,4 @@ with tab_about:
         st.write("Kolom data fold:", list(fold_df.columns))
         st.write("Jumlah baris yang sedang dipakai:", len(view_df))
 
-st.markdown('<div class="footer">Dashboard penelitian · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer"> penelitian · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
