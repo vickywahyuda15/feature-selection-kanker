@@ -83,7 +83,18 @@ st.markdown(
       div[data-testid="stMetricLabel"] p { color: #64748b; font-weight: 600; }
       div[data-testid="stMetricValue"] { color: #14233a; font-weight: 800; }
       div[data-testid="stTabs"] button { font-weight: 700; }
-      .stDataFrame { border-radius: 12px; overflow: hidden; }
+      .stDataFrame { border-radius: 12px; overflow: hidden; 
+      /* Memperjelas header tabel */
+[data-testid="stDataFrame"] [role="columnheader"] {
+    background-color: #17365D !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stDataFrame"] [role="columnheader"] * {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
 
       /* Perbaikan kontras header tabel Streamlit */
       [data-testid="stDataFrame"] [role="columnheader"],
