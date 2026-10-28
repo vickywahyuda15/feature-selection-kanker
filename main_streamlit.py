@@ -380,8 +380,9 @@ st.markdown(
             <p>Nama : Haykal Saputra Joban-072926031 </p>
             <p>Nama : Muhammad Vicky Wahyuda-072926007 </p>
             <p>Nama : Afrizal Subagja-072926002 </p>
-            <p>Dosen : Dr.FAJAR DELLI WIHARTIKO, S.Si, MM, M.Kom </p>
-            <p> </p>
+         <p style="margin-bottom: 24px;">
+  Dosen : Dr.FAJAR DELLI WIHARTIKO, S.Si, MM, M.Kom
+</p>
            <p style="margin-top: 0;">
   Perbandingan Baseline, Sequential Forward Selection (SFS),
   Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA)
