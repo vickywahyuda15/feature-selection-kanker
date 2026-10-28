@@ -127,6 +127,24 @@ st.markdown(
 [data-testid="stVerticalBlockBorderWrapper"] {
     background-color: #FFFFFF !important;
 }
+/* Perbaikan kontras teks di komputer dan HP */
+.stMarkdown,
+.stMarkdown p,
+.stMarkdown li,
+.stMarkdown h1,
+.stMarkdown h2,
+.stMarkdown h3,
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li {
+    color: #1E293B !important;
+    opacity: 1 !important;
+}
+
+/* Judul kartu */
+[data-testid="stVerticalBlockBorderWrapper"] h3 {
+    color: #1E293B !important;
+    opacity: 1 !important;
+}
       
     </style>
     """,
@@ -416,7 +434,6 @@ st.markdown(
 )
 
 st.markdown('<div class="section-head">Ringkasan eksekutif</div>', unsafe_allow_html=True)
-st.markdown('<div class="section-sub">Ringkasan hasil berdasarkan fold yang dipilih pada panel kiri.</div>', unsafe_allow_html=True)
 
 # Four KPI cards
 k1, k2, k3, k4 = st.columns(4)
