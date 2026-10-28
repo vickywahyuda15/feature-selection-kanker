@@ -145,6 +145,31 @@ st.markdown(
     color: #1E293B !important;
     opacity: 1 !important;
 }
+/* Memulihkan kontras teks pada banner utama */
+.hero,
+.hero * {
+    opacity: 1 !important;
+}
+
+.hero h1 {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+.hero p {
+    color: #DCE8F7 !important;
+    -webkit-text-fill-color: #DCE8F7 !important;
+}
+
+.hero .hero-kicker {
+    color: #9DECF5 !important;
+    -webkit-text-fill-color: #9DECF5 !important;
+}
+
+.hero .hero-chip {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
       
     </style>
     """,
