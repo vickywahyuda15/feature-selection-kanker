@@ -375,9 +375,7 @@ st.markdown(
     """
     <div class="hero">
       <div class="hero-kicker">Analisis dan Desain Algoritma· Machine Learning</div>
-      <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara
-      Study Kasus Nomor 8
-      </h1>
+      <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
              <P>Nama : Afifah Zubdatul Ishlah-072926011 </p>
             <p>Nama : Haykal Saputra Joban-072926031 </p>
             <p>Nama : Muhammad Vicky Wahyuda-072926007 </p>
