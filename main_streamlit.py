@@ -83,47 +83,51 @@ st.markdown(
       div[data-testid="stMetricLabel"] p { color: #64748b; font-weight: 600; }
       div[data-testid="stMetricValue"] { color: #14233a; font-weight: 800; }
       div[data-testid="stTabs"] button { font-weight: 700; }
-      .stDataFrame { border-radius: 12px; overflow: hidden; 
-      /* Memperjelas header tabel */
-[data-testid="stDataFrame"] [role="columnheader"] {
-    background-color: #17365D !important;
-    color: #FFFFFF !important;
-    font-weight: 700 !important;
+      .stDataFrame { border-radius: 12px; overflow: hidden; }
+
+      /* Mode presentasi: tata letak lebih ringkas dan bersih */
+      [data-testid="stToolbar"],
+      [data-testid="stDecoration"],
+      #MainMenu,
+      footer {
+        visibility: hidden !important;
+      }
+      .block-container {
+        max-width: 1320px;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+      }
+      .hero {
+        padding: 24px 28px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section-head {
+        margin-top: 8px;
+      }
+      /* Memperbaiki kontras teks pada kartu */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    color: #1E293B !important;
 }
 
-[data-testid="stDataFrame"] [role="columnheader"] * {
-    color: #FFFFFF !important;
+[data-testid="stVerticalBlockBorderWrapper"] h1,
+[data-testid="stVerticalBlockBorderWrapper"] h2,
+[data-testid="stVerticalBlockBorderWrapper"] h3,
+[data-testid="stVerticalBlockBorderWrapper"] p,
+[data-testid="stVerticalBlockBorderWrapper"] li,
+[data-testid="stVerticalBlockBorderWrapper"] span {
+    color: #1E293B !important;
     opacity: 1 !important;
 }
 
-      /* Perbaikan kontras header tabel Streamlit */
-      [data-testid="stDataFrame"] [role="columnheader"],
-      [data-testid="stDataFrame"] thead th {
-        background-color: #17365D !important;
-        color: #FFFFFF !important;
-        font-weight: 700 !important;
-        border-bottom: 1px solid #CBD5E1 !important;
-      }
-      [data-testid="stDataFrame"] [role="columnheader"] *,
-      [data-testid="stDataFrame"] thead th * {
-        color: #FFFFFF !important;
-        opacity: 1 !important;
-      }
-      [data-testid="stToolbar"] {
-    display: none !important;
+/* Pastikan kartu memiliki latar putih */
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background-color: #FFFFFF !important;
 }
-
-[data-testid="stDecoration"] {
-    display: none !important;
-}
-
-#MainMenu {
-    visibility: hidden;
-}
-
-footer {
-    visibility: hidden;
-}
+      
     </style>
     """,
     unsafe_allow_html=True,
@@ -299,7 +303,7 @@ if fold_df is None or fold_df.empty:
         <p>Visualisasi evaluasi klasifikasi kanker payudara menggunakan Logistic Regression.</p></div>
         """, unsafe_allow_html=True)
     st.error("File hasil eksperimen belum ditemukan atau tidak dapat dibaca.")
-    st.markdown("Pastikan file hasil terbaru berada di folder `hasil_pengujian_seed_final`.")
+    st.markdown("Pastikan file hasil terbaru berada di folder `hasil_pengujian`.")
     st.code(str(RESULT_DIR))
     st.markdown("Jalankan `python .\\validasi_penelitian_final.py` terlebih dahulu, kemudian muat ulang dashboard.")
     st.stop()
@@ -389,14 +393,20 @@ if time_df is not None and not time_df.empty:
 st.markdown(
     """
     <div class="hero">
-      <div class="hero-kicker">Dashboard · Machine Learning</div>
-            <P>Nama : Afifah Zubdatul Ishlah-072926011 </p>
+      <div class="hero-kicker">Analisis dan Desain Algoritma· Machine Learning</div>
+      <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
+             <P>Nama : Afifah Zubdatul Ishlah-072926011 </p>
             <p>Nama : Haykal Saputra Joban-072926031 </p>
             <p>Nama : Muhammad Vicky Wahyuda-072926007 </p>
             <p>Nama : Afrizal Subagja-072926002 </p>
-            <p>Dosen : Dr.FAJAR DELLI WIHARTIKO, S.Si, MM, M.Kom </p>
-      <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
-      <p>Perbandingan Baseline, Sequential Forward Selection (SFS), Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA) dengan Logistic Regression.</p>
+         <p style="margin-bottom: 24px;">
+  Dosen : Dr.FAJAR DELLI WIHARTIKO, S.Si, MM, M.Kom
+</p>
+           <p style="margin-top: 0;">
+  Perbandingan Baseline, Sequential Forward Selection (SFS),
+  Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA)
+  dengan Logistic Regression.
+</p>
       <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
       <span class="hero-chip">569 sampel · 30 fitur</span>
       <span class="hero-chip">3 seed × 5 fold</span>
@@ -549,9 +559,9 @@ with tab_features:
                 fig.patch.set_facecolor("white")
                 ax.set_facecolor("white")
                 fig.tight_layout()
-                st.pyplot(fig, use_container_width=True)
+                st.pyplot(fig, width="stretch")
                 plt.close(fig)
-                st.dataframe(freq.sort_values("Frekuensi", ascending=False), use_container_width=True, hide_index=True)
+                st.dataframe(freq.sort_values("Frekuensi", ascending=False), width="stretch", hide_index=True)
             else:
                 st.info("Tidak ada daftar fitur yang dapat dihitung pada pilihan ini.")
 
@@ -574,7 +584,7 @@ with tab_folds:
         for c in show_df.columns:
             if norm(c) in {"accuracy", "precisionmalignant", "recallmalignant", "f1malignant"}:
                 col_config[c] = st.column_config.NumberColumn(c + " (%)", format="%.2f%%")
-        st.dataframe(show_df, use_container_width=True, hide_index=True, column_config=col_config, height=460)
+        st.dataframe(show_df, width="stretch", hide_index=True, column_config=col_config, height=460)
         st.download_button("⬇️ Unduh data fold yang sedang ditampilkan", data=fold_view[display_cols].to_csv(index=False).encode("utf-8-sig"), file_name="detail_fold_terfilter.csv", mime="text/csv")
 
 with tab_about:
