@@ -372,7 +372,7 @@ if metric_map["Accuracy"] is None:
     st.write("Kolom yang tersedia:", list(fold_df.columns))
     st.stop()
 
-# --------------------------- Sidebar ---------------------------
+# -------------------------- Sidebar ---------------------------
 with st.sidebar:
     st.markdown("## 🧬 Menu Penelitian")
     st.caption("Feature Selection · Logistic Regression")
