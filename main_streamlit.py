@@ -170,6 +170,16 @@ st.markdown(
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
 }
+.anggota-kelompok p {
+    color: #DCE8F7 !important;
+    -webkit-text-fill-color: #DCE8F7 !important;
+    opacity: 1 !important;
+    margin: 5px 0;
+}
+
+.anggota-kelompok p:last-child {
+    margin-bottom: 24px;
+}
       
     </style>
     """,
