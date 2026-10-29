@@ -374,6 +374,7 @@ st.markdown(
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Nama:Muhammad Vicky Wahyuda - 0729260007.</p>
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Nama:Afrizal Subagja - 072926002.</p>
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Dosen: Dr. Fajar Delli Wihartiko, S.Si., MM., M.Kom.</p>
+      <p>
       <p>Perbandingan Baseline, Sequential Forward Selection (SFS), Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA) dengan Logistic Regression.</p>
       <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
       <span class="hero-chip">569 sampel · 30 fitur</span>
@@ -572,4 +573,4 @@ with tab_about:
         st.write("Kolom data fold:", list(fold_df.columns))
         st.write("Jumlah baris yang sedang dipakai:", len(view_df))
 
-st.markdown('<div class="footer">Dashboard penelitian · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Dashboard · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
