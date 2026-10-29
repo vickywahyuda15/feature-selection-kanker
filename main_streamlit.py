@@ -181,6 +181,36 @@ st.markdown(
     margin-bottom: 24px;
 }
       
+
+      /* Kontras banner: judul dan anggota kelompok tetap terang */
+      .hero, .hero * { opacity: 1 !important; }
+      .hero h1 { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
+      .hero .hero-kicker { color: #9DECF5 !important; -webkit-text-fill-color: #9DECF5 !important; }
+      .hero .anggota-kelompok p,
+      .hero .deskripsi-penelitian {
+        color: #DCE8F7 !important;
+        -webkit-text-fill-color: #DCE8F7 !important;
+        opacity: 1 !important;
+      }
+      .hero .anggota-kelompok p { margin: 5px 0; }
+      .hero .anggota-kelompok .dosen { margin-top: 8px; margin-bottom: 24px; }
+      .hero .hero-chip {
+        color: #FFFFFF !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+      }
+      .hero .hero-chips { margin-top: 8px; }
+      /* Kontras kartu Dataset dan Rancangan Pengujian */
+      .panel {
+        background-color: #FFFFFF !important;
+        color: #1E293B !important;
+        opacity: 1 !important;
+      }
+      .panel h1, .panel h2, .panel h3, .panel h4, .panel h5,
+      .panel p, .panel b, .panel strong, .panel li, .panel span {
+        color: #1E293B !important;
+        -webkit-text-fill-color: #1E293B !important;
+        opacity: 1 !important;
+      }
     </style>
     """,
     unsafe_allow_html=True,
@@ -443,42 +473,35 @@ if time_df is not None and not time_df.empty:
         metrics["Waktu_Seleksi_Detik"] = time_avg.reindex(metrics.index)
 
 # --------------------------- Header ---------------------------
-st.markdown("""
-<div class="hero">
-    <div class="hero-kicker">
-        PRESENTASI PENELITIAN · MACHINE LEARNING
-    </div>
+st.markdown(
+    """
+    <div class="hero">
+        <div class="hero-kicker">PRESENTASI PENELITIAN · MACHINE LEARNING</div>
+        <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
 
-    <h1>
-        Analisis Feature Selection<br>
-        pada Klasifikasi Kanker Payudara
-    </h1>
+        <div class="anggota-kelompok">
+            <p>Nama: Afifah Zubdatul Ishlah-072926011</p>
+            <p>Nama: Haykal Saputra Joban-072926031</p>
+            <p>Nama: Muhammad Vicky Wahyuda-072926007</p>
+            <p>Nama: Afrizal Subagja-072926002</p>
+            <p class="dosen">Dosen: Dr. Fajar Delli Wihartiko, S.Si., MM., M.Kom.</p>
+        </div>
 
-    <div class="anggota-kelompok">
-        <p>Nama: Afifah Zubdatul Ishlah-072926011</p>
-        <p>Nama: Haykal Saputra Joban-072926031</p>
-        <p>Nama: Muhammad Vicky Wahyuda-072926007</p>
-        <p>Nama: Afrizal Subagja-072926002</p>
-        <p style="margin-bottom:24px;">
-            Dosen: Dr. Fajar Delli Wihartiko, S.Si., MM., M.Kom.
+        <p class="deskripsi-penelitian">
+            Perbandingan Baseline, Sequential Forward Selection (SFS),
+            Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA)
+            dengan Logistic Regression.
         </p>
-    </div>
 
-    <p>
-        Perbandingan Baseline, Sequential Forward Selection (SFS),
-        Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA)
-        dengan Logistic Regression.
-    </p>
-
-    <div style="margin-top:24px;">
-        <span class="hero-chip">
-            Breast Cancer Wisconsin (Diagnostic)
-        </span>
-        <span class="hero-chip">569 sampel · 30 fitur</span>
-        <span class="hero-chip">3 seed × 5 fold</span>
+        <div class="hero-chips">
+            <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
+            <span class="hero-chip">569 sampel · 30 fitur</span>
+            <span class="hero-chip">3 seed × 5 fold</span>
+        </div>
     </div>
-</div>
-""", unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True,
+)
 
 st.markdown('<div class="section-head">Ringkasan eksekutif</div>', unsafe_allow_html=True)
 
