@@ -9,7 +9,7 @@ import streamlit as st
 
 # ============================================================
 # DASHBOARD INTERAKTIF - FEATURE SELECTION KANKER PAYUDARA
-# Membaca hasil dari validasi_penelitian_final.py
+# Membaca hasil dari validasi_penelitian.py
 # Tidak menjalankan ulang eksperimen.
 # ============================================================
 
@@ -41,13 +41,13 @@ st.markdown(
                     linear-gradient(180deg, #f7f9fc 0%, #eef3f9 100%);
       }
       [data-testid="stHeader"] { background: rgba(247,249,252,.88); }
-      .block-container { max-width: 1500px; padding-top: 1.4rem; padding-bottom: 2.5rem; }
+      .block-container { max-width: 1400px; padding-top: 1.2rem; padding-bottom: 2rem; }
       [data-testid="stSidebar"] { background: #101a2c; }
       [data-testid="stSidebar"] * { color: #edf3ff !important; }
       [data-testid="stSidebar"] [data-baseweb="select"] div { color: #111827 !important; }
       .hero {
         background: linear-gradient(120deg, #101a2c 0%, #183b66 58%, #087e8b 100%);
-        padding: 30px 34px; border-radius: 24px; color: white; margin-bottom: 20px;
+        padding: 26px 30px; border-radius: 20px; color: white; margin-bottom: 18px;
         box-shadow: 0 14px 34px rgba(15, 23, 42, .17);
       }
       .hero-kicker { color: #a5f3fc; text-transform: uppercase; letter-spacing: .15em;
@@ -85,22 +85,12 @@ st.markdown(
       div[data-testid="stTabs"] button { font-weight: 700; }
       .stDataFrame { border-radius: 12px; overflow: hidden; }
 
-      /* Mode presentasi: tata letak lebih ringkas dan bersih */
+      /* Tampilan rapi: sembunyikan elemen dekoratif Streamlit */
       [data-testid="stToolbar"],
       [data-testid="stDecoration"],
       #MainMenu,
       footer {
         visibility: hidden !important;
-      }
-      .block-container {
-        max-width: 1320px;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
-      }
-      .hero {
-        padding: 24px 28px;
-        border-radius: 20px;
-        margin-bottom: 16px;
       }
       .hero h1 {
         font-size: 2rem;
@@ -108,109 +98,7 @@ st.markdown(
       .section-head {
         margin-top: 8px;
       }
-      /* Memperbaiki kontras teks pada kartu */
-[data-testid="stVerticalBlockBorderWrapper"] {
-    color: #1E293B !important;
-}
-
-[data-testid="stVerticalBlockBorderWrapper"] h1,
-[data-testid="stVerticalBlockBorderWrapper"] h2,
-[data-testid="stVerticalBlockBorderWrapper"] h3,
-[data-testid="stVerticalBlockBorderWrapper"] p,
-[data-testid="stVerticalBlockBorderWrapper"] li,
-[data-testid="stVerticalBlockBorderWrapper"] span {
-    color: #1E293B !important;
-    opacity: 1 !important;
-}
-
-/* Pastikan kartu memiliki latar putih */
-[data-testid="stVerticalBlockBorderWrapper"] {
-    background-color: #FFFFFF !important;
-}
-/* Perbaikan kontras teks di komputer dan HP */
-.stMarkdown,
-.stMarkdown p,
-.stMarkdown li,
-.stMarkdown h1,
-.stMarkdown h2,
-.stMarkdown h3,
-[data-testid="stMarkdownContainer"] p,
-[data-testid="stMarkdownContainer"] li {
-    color: #1E293B !important;
-    opacity: 1 !important;
-}
-
-/* Judul kartu */
-[data-testid="stVerticalBlockBorderWrapper"] h3 {
-    color: #1E293B !important;
-    opacity: 1 !important;
-}
-/* Memulihkan kontras teks pada banner utama */
-.hero,
-.hero * {
-    opacity: 1 !important;
-}
-
-.hero h1 {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-}
-
-.hero p {
-    color: #DCE8F7 !important;
-    -webkit-text-fill-color: #DCE8F7 !important;
-}
-
-.hero .hero-kicker {
-    color: #9DECF5 !important;
-    -webkit-text-fill-color: #9DECF5 !important;
-}
-
-.hero .hero-chip {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-}
-.anggota-kelompok p {
-    color: #DCE8F7 !important;
-    -webkit-text-fill-color: #DCE8F7 !important;
-    opacity: 1 !important;
-    margin: 5px 0;
-}
-
-.anggota-kelompok p:last-child {
-    margin-bottom: 24px;
-}
       
-
-      /* Kontras banner: judul dan anggota kelompok tetap terang */
-      .hero, .hero * { opacity: 1 !important; }
-      .hero h1 { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
-      .hero .hero-kicker { color: #9DECF5 !important; -webkit-text-fill-color: #9DECF5 !important; }
-      .hero .anggota-kelompok p,
-      .hero .deskripsi-penelitian {
-        color: #DCE8F7 !important;
-        -webkit-text-fill-color: #DCE8F7 !important;
-        opacity: 1 !important;
-      }
-      .hero .anggota-kelompok p { margin: 5px 0; }
-      .hero .anggota-kelompok .dosen { margin-top: 8px; margin-bottom: 24px; }
-      .hero .hero-chip {
-        color: #FFFFFF !important;
-        -webkit-text-fill-color: #FFFFFF !important;
-      }
-      .hero .hero-chips { margin-top: 8px; }
-      /* Kontras kartu Dataset dan Rancangan Pengujian */
-      .panel {
-        background-color: #FFFFFF !important;
-        color: #1E293B !important;
-        opacity: 1 !important;
-      }
-      .panel h1, .panel h2, .panel h3, .panel h4, .panel h5,
-      .panel p, .panel b, .panel strong, .panel li, .panel span {
-        color: #1E293B !important;
-        -webkit-text-fill-color: #1E293B !important;
-        opacity: 1 !important;
-      }
     </style>
     """,
     unsafe_allow_html=True,
@@ -263,60 +151,55 @@ def first_existing(folder, names):
     return None
 
 
-def load_per_fold():
-    # Utamakan data final gabungan, agar dashboard tidak secara tidak sengaja
-    # membaca file ringkasan lama yang berada di root project.
-    path = first_existing(RESULT_DIR, ["seluruh_hasil_per_fold.csv", "hasil_validasi_per_fold.csv"])
+def _load_csv_with_fallback(primary_names, seed_filename, fallback_names):
+    """Cari dan muat CSV dengan tiga lapis fallback:
+    1. File gabungan di folder hasil_pengujian (prioritas utama).
+    2. Gabungkan file per subfolder seed (fallback).
+    3. File lama di root project (fallback terakhir).
+    """
+    path = first_existing(RESULT_DIR, primary_names)
     if path:
         return read_csv(path), path
-
-    # Fallback: gabungkan keluaran per seed apabila file gabungan belum ada.
-    parts = []
-    for seed in [21, 42, 2026]:
-        candidate = RESULT_DIR / f"seed_{seed}" / "hasil_per_fold.csv"
-        df = read_csv(candidate)
-        if df is not None:
-            parts.append(df)
+    parts = [
+        read_csv(RESULT_DIR / f"seed_{s}" / seed_filename)
+        for s in [21, 42, 2026]
+    ]
+    parts = [p for p in parts if p is not None]
     if parts:
         return pd.concat(parts, ignore_index=True), RESULT_DIR
-
-    # Fallback terakhir untuk file lama di direktori project.
-    path = first_existing(BASE_DIR, ["seluruh_hasil_per_fold.csv", "hasil_validasi_per_fold.csv", "hasil_perbandingan.csv"])
+    path = first_existing(BASE_DIR, fallback_names)
     return (read_csv(path), path) if path else (None, None)
+
+
+def load_per_fold():
+    return _load_csv_with_fallback(
+        primary_names=["seluruh_hasil_per_fold.csv", "hasil_validasi_per_fold.csv"],
+        seed_filename="hasil_per_fold.csv",
+        fallback_names=["seluruh_hasil_per_fold.csv", "hasil_validasi_per_fold.csv", "hasil_perbandingan.csv"],
+    )
 
 
 def load_time_data():
-    path = first_existing(RESULT_DIR, ["seluruh_waktu_per_fold.csv", "waktu_validasi_per_fold.csv"])
-    if path:
-        return read_csv(path), path
-    parts = []
-    for seed in [21, 42, 2026]:
-        candidate = RESULT_DIR / f"seed_{seed}" / "waktu_per_fold.csv"
-        df = read_csv(candidate)
-        if df is not None:
-            parts.append(df)
-    if parts:
-        return pd.concat(parts, ignore_index=True), RESULT_DIR
-    path = first_existing(BASE_DIR, ["seluruh_waktu_per_fold.csv", "waktu_validasi_per_fold.csv", "waktu_seleksi.csv"])
-    return (read_csv(path), path) if path else (None, None)
+    return _load_csv_with_fallback(
+        primary_names=["seluruh_waktu_per_fold.csv", "waktu_validasi_per_fold.csv"],
+        seed_filename="waktu_per_fold.csv",
+        fallback_names=["seluruh_waktu_per_fold.csv", "waktu_validasi_per_fold.csv", "waktu_seleksi.csv"],
+    )
 
 
 def load_feature_data(fold_df=None):
-    path = first_existing(RESULT_DIR, ["seluruh_fitur_per_fold.csv", "fitur_validasi_per_fold.csv"])
-    if path:
-        return read_csv(path), path
-    parts = []
-    for seed in [21, 42, 2026]:
-        candidate = RESULT_DIR / f"seed_{seed}" / "fitur_per_fold.csv"
-        df = read_csv(candidate)
-        if df is not None:
-            parts.append(df)
-    if parts:
-        return pd.concat(parts, ignore_index=True), RESULT_DIR
+    result, path = _load_csv_with_fallback(
+        primary_names=["seluruh_fitur_per_fold.csv", "fitur_validasi_per_fold.csv"],
+        seed_filename="fitur_per_fold.csv",
+        fallback_names=["seluruh_fitur_per_fold.csv", "fitur_validasi_per_fold.csv", "fitur_terpilih.csv"],
+    )
+    if result is not None:
+        return result, path
+    # Fallback khusus: ambil kolom fitur dari data fold jika tersedia.
     if fold_df is not None and "Fitur_Terpilih" in fold_df.columns:
-        return fold_df[[c for c in ["Seed", "Fold", "Metode", "Fitur_Terpilih"] if c in fold_df.columns]].copy(), None
-    path = first_existing(BASE_DIR, ["seluruh_fitur_per_fold.csv", "fitur_validasi_per_fold.csv", "fitur_terpilih.csv"])
-    return (read_csv(path), path) if path else (None, None)
+        cols = [c for c in ["Seed", "Fold", "Metode", "Fitur_Terpilih"] if c in fold_df.columns]
+        return fold_df[cols].copy(), None
+    return None, None
 
 
 def nice_method_order(values):
@@ -355,13 +238,20 @@ def styled_bar(metric_df, metric, title, xlabel, percent=False, descending=False
     max_val = max(values) if len(values) else 1
     ax.set_xlim(0, max_val * 1.18 if max_val > 0 else 1)
     for bar, value in zip(bars, values):
-        label = f"{value:.2f}%" if percent else (f"{value:.2f}" if metric == "Jumlah_Fitur" else f"{value:.3f} detik")
+        if percent:
+            label = f"{value:.2f}%"
+        elif metric == "Jumlah_Fitur":
+            label = f"{value:.2f}"
+        elif metric == "Waktu_Seleksi_Detik":
+            label = f"{value:.3f} dtk"
+        else:
+            label = f"{value:.4f}"
         ax.text(value + max_val * 0.02, bar.get_y() + bar.get_height()/2, label,
                 va="center", ha="left", fontsize=9, color="#14233a", fontweight="bold")
     fig.patch.set_facecolor("white")
     ax.set_facecolor("white")
     fig.tight_layout(pad=1.25)
-    st.pyplot(fig, width="stretch")
+    st.pyplot(fig, use_container_width=True)
     plt.close(fig)
 
 
@@ -388,7 +278,7 @@ if fold_df is None or fold_df.empty:
     st.error("File hasil eksperimen belum ditemukan atau tidak dapat dibaca.")
     st.markdown("Pastikan file hasil terbaru berada di folder `hasil_pengujian`.")
     st.code(str(RESULT_DIR))
-    st.markdown("Jalankan `python .\\validasi_penelitian_final.py` terlebih dahulu, kemudian muat ulang dashboard.")
+    st.markdown("Jalankan `python validasi_penelitian.py` terlebih dahulu, kemudian muat ulang dashboard.")
     st.stop()
 
 # Normalize names and numeric columns.
@@ -412,7 +302,7 @@ if metric_map["Accuracy"] is None:
     st.write("Kolom yang tersedia:", list(fold_df.columns))
     st.stop()
 
-# -------------------------- Sidebar ---------------------------
+# --------------------------- Sidebar ---------------------------
 with st.sidebar:
     st.markdown("## 🧬 Menu Penelitian")
     st.caption("Feature Selection · Logistic Regression")
@@ -476,34 +366,20 @@ if time_df is not None and not time_df.empty:
 st.markdown(
     """
     <div class="hero">
-        <div class="hero-kicker">PRESENTASI PENELITIAN · MACHINE LEARNING</div>
-        <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
-
-        <div class="anggota-kelompok">
-            <p>Nama: Afifah Zubdatul Ishlah-072926011</p>
-            <p>Nama: Haykal Saputra Joban-072926031</p>
-            <p>Nama: Muhammad Vicky Wahyuda-072926007</p>
-            <p>Nama: Afrizal Subagja-072926002</p>
-            <p class="dosen">Dosen: Dr. Fajar Delli Wihartiko, S.Si., MM., M.Kom.</p>
-        </div>
-
-        <p class="deskripsi-penelitian">
-            Perbandingan Baseline, Sequential Forward Selection (SFS),
-            Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA)
-            dengan Logistic Regression.
-        </p>
-
-        <div class="hero-chips">
-            <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
-            <span class="hero-chip">569 sampel · 30 fitur</span>
-            <span class="hero-chip">3 seed × 5 fold</span>
-        </div>
+      <div class="hero-kicker">Presentasi Penelitian · Machine Learning</div>
+      <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
+      <p>Perbandingan Baseline, Sequential Forward Selection (SFS), Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA) dengan Logistic Regression.</p>
+      <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Tim penelitian · Dosen: Dr. Fajar Delli Wihartiko, S.Si., MM., M.Kom.</p>
+      <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
+      <span class="hero-chip">569 sampel · 30 fitur</span>
+      <span class="hero-chip">3 seed × 5 fold</span>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
 st.markdown('<div class="section-head">Ringkasan eksekutif</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-sub">Ringkasan hasil berdasarkan fold yang dipilih pada panel kiri.</div>', unsafe_allow_html=True)
 
 # Four KPI cards
 k1, k2, k3, k4 = st.columns(4)
@@ -569,7 +445,7 @@ with tab_summary:
     with right2:
         styled_bar(metrics, "Waktu_Seleksi_Detik", "Waktu seleksi fitur", "Waktu (detik)")
 
-    st.markdown('<div class="section-head">hasil</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-head">Hasil &amp; Interpretasi</div>', unsafe_allow_html=True)
     reading_items = []
     if "Accuracy" in metrics and metrics["Accuracy"].notna().any():
         best = metrics["Accuracy"].idxmax()
@@ -646,9 +522,9 @@ with tab_features:
                 fig.patch.set_facecolor("white")
                 ax.set_facecolor("white")
                 fig.tight_layout()
-                st.pyplot(fig, width="stretch")
+                st.pyplot(fig, use_container_width=True)
                 plt.close(fig)
-                st.dataframe(freq.sort_values("Frekuensi", ascending=False), width="stretch", hide_index=True)
+                st.dataframe(freq.sort_values("Frekuensi", ascending=False), use_container_width=True, hide_index=True)
             else:
                 st.info("Tidak ada daftar fitur yang dapat dihitung pada pilihan ini.")
 
@@ -691,4 +567,4 @@ with tab_about:
         st.write("Kolom data fold:", list(fold_df.columns))
         st.write("Jumlah baris yang sedang dipakai:", len(view_df))
 
-st.markdown('<div class="footer">Dashboard · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Dashboard penelitian · Feature Selection dengan Logistic Regression · Hasil dibaca dari CSV eksperimen lokal</div>', unsafe_allow_html=True)
