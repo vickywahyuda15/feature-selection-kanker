@@ -98,6 +98,42 @@ st.markdown(
       .section-head {
         margin-top: 8px;
       }
+/* Memperbaiki warna teks kartu Dataset dan Rancangan Pengujian */
+.panel {
+    background-color: #FFFFFF !important;
+    color: #1E293B !important;
+    opacity: 1 !important;
+}
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel p,
+.panel b,
+.panel strong,
+.panel li,
+.panel span {
+    color: #1E293B !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #1E293B !important;
+}
+
+/* Menjaga keterbacaan pada layar HP */
+@media screen and (max-width: 768px) {
+    .panel {
+        background-color: #FFFFFF !important;
+        color: #1E293B !important;
+    }
+
+    .panel * {
+        color: #1E293B !important;
+        opacity: 1 !important;
+        -webkit-text-fill-color: #1E293B !important;
+    }
+}
+      
       
     </style>
     """,
