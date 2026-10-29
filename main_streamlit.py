@@ -433,30 +433,42 @@ if time_df is not None and not time_df.empty:
         metrics["Waktu_Seleksi_Detik"] = time_avg.reindex(metrics.index)
 
 # --------------------------- Header ---------------------------
-st.markdown(
-    """
-    <div class="hero">
-      <div class="hero-kicker">Analisis dan Desain Algoritma· Machine Learning</div>
-      <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
-             <P>Nama : Afifah Zubdatul Ishlah-072926011 </p>
-            <p>Nama : Haykal Saputra Joban-072926031 </p>
-            <p>Nama : Muhammad Vicky Wahyuda-072926007 </p>
-            <p>Nama : Afrizal Subagja-072926002 </p>
-         <p style="margin-bottom: 24px;">
-  Dosen : Dr.FAJAR DELLI WIHARTIKO, S.Si, MM, M.Kom
-</p>
-           <p style="margin-top: 0;">
-  Perbandingan Baseline, Sequential Forward Selection (SFS),
-  Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA)
-  dengan Logistic Regression.
-</p>
-      <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
-      <span class="hero-chip">569 sampel · 30 fitur</span>
-      <span class="hero-chip">3 seed × 5 fold</span>
+st.markdown("""
+<div class="hero">
+    <div class="hero-kicker">
+        PRESENTASI PENELITIAN · MACHINE LEARNING
     </div>
-    """,
-    unsafe_allow_html=True,
-)
+
+    <h1>
+        Analisis Feature Selection<br>
+        pada Klasifikasi Kanker Payudara
+    </h1>
+
+    <div class="anggota-kelompok">
+        <p>Nama: Afifah Zubdatul Ishlah-072926011</p>
+        <p>Nama: Haykal Saputra Joban-072926031</p>
+        <p>Nama: Muhammad Vicky Wahyuda-072926007</p>
+        <p>Nama: Afrizal Subagja-072926002</p>
+        <p style="margin-bottom:24px;">
+            Dosen: Dr. Fajar Delli Wihartiko, S.Si., MM., M.Kom.
+        </p>
+    </div>
+
+    <p>
+        Perbandingan Baseline, Sequential Forward Selection (SFS),
+        Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA)
+        dengan Logistic Regression.
+    </p>
+
+    <div style="margin-top:24px;">
+        <span class="hero-chip">
+            Breast Cancer Wisconsin (Diagnostic)
+        </span>
+        <span class="hero-chip">569 sampel · 30 fitur</span>
+        <span class="hero-chip">3 seed × 5 fold</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown('<div class="section-head">Ringkasan eksekutif</div>', unsafe_allow_html=True)
 
