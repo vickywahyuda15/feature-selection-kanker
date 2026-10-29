@@ -368,12 +368,13 @@ st.markdown(
     <div class="hero">
       <div class="hero-kicker">Presentasi Penelitian · Machine Learning</div>
       <h1>Analisis Feature Selection<br>pada Klasifikasi Kanker Payudara</h1>
-      <p>Perbandingan Baseline, Sequential Forward Selection (SFS), Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA) dengan Logistic Regression.</p>
+      <h2>Group 4 Study Kasus Nomor 8 </h2>
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Nama:Afifah Zundatul Ishlah - 072926011.</p>
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Nama:Haykal Saputra Joban - 072926031.</p>
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Nama:Muhammad Vicky Wahyuda - 0729260007.</p>
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Nama:Afrizal Subagja - 072926002.</p>
       <p style="margin-top:12px;font-size:.85rem;color:#dce8f7;">Dosen: Dr. Fajar Delli Wihartiko, S.Si., MM., M.Kom.</p>
+      <p>Perbandingan Baseline, Sequential Forward Selection (SFS), Recursive Feature Elimination (RFE), dan Genetic Algorithm (GA) dengan Logistic Regression.</p>
       <span class="hero-chip">Breast Cancer Wisconsin (Diagnostic)</span>
       <span class="hero-chip">569 sampel · 30 fitur</span>
       <span class="hero-chip">3 seed × 5 fold</span>
